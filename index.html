@@ -74,7 +74,7 @@
 
 	<div class="fh5co-loader"></div>
 
-	<div id="landing-page" class="pages active">
+	<div id="landing-page">
 		<nav class="fh5co-nav" role="navigation">
 			<div class="container">
 				<div class="row">
@@ -130,7 +130,7 @@
 		</header>
 	</div>
 
-	<div id="page" class="pages hidden">
+	<div id="page" class="show-off">
 		<nav class="fh5co-nav" role="navigation">
 			<div class="container">
 				<div class="row">
@@ -189,14 +189,14 @@
 		<div id="fh5co-couple">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fade-in">
 						<h2>Hello!</h2>
 						<h3>Assalamu'alaikum Warahmatullahi Wabarakatuh</h3>
 						<p>Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta’ala, Insya Allah kami akan menyelenggarakan Acara
 							Pernikahan :</p>
 					</div>
 				</div>
-				<div class="couple-wrap animate-box">
+				<div class="couple-wrap fade-in">
 					<div class="couple-half">
 						<div class="groom">
 							<img src="images/groom.jpg" alt="groom" class="img-responsive">
@@ -224,7 +224,7 @@
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fade-in">
 						<span>Our Special Events</span>
 						<h2>Wedding Events</h2>
 					</div>
@@ -234,7 +234,7 @@
 						<div class="display-tc">
 							<div class="col-md-10 col-md-offset-1">
 								<div class="col-md-6 col-sm-6 text-center">
-									<div class="event-wrap animate-box">
+									<div class="event-wrap fade-in">
 										<h3>Main Ceremony</h3>
 										<div class="event-col">
 											<i class="icon-clock"></i>
@@ -252,7 +252,7 @@
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-6 text-center">
-									<div class="event-wrap animate-box">
+									<div class="event-wrap fade-in">
 										<h3>Wedding Party</h3>
 										<div class="event-col">
 											<i class="icon-clock"></i>
@@ -279,7 +279,7 @@
 		<div id="fh5co-couple-story">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fade-in">
 						<span>We Love Each Other</span>
 						<h2>Our Story</h2>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
@@ -288,8 +288,8 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0">
-						<ul class="timeline animate-box">
-							<li class="animate-box">
+						<ul class="timeline fade-in">
+							<li class="fade-in">
 								<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -303,7 +303,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="timeline-inverted animate-box">
+							<li class="timeline-inverted fade-in">
 								<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -317,7 +317,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="animate-box">
+							<li class="fade-in">
 								<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -340,7 +340,7 @@
 		<div id="fh5co-gallery" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fade-in">
 						<span>Our Memories</span>
 						<h2>Wedding Gallery</h2>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
@@ -712,6 +712,32 @@
 	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- Script Fade In Scroll -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const fadeinElements = document.querySelectorAll('.fade-in');
+
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1 // Trigger when 10% of the element is visible
+			};
+
+			const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('fade-active');
+						observer.unobserve(entry.target); // Stop observing once the element is visible
+					}
+				});
+			}, observerOptions);
+
+			fadeinElements.forEach(element => {
+				observer.observe(element);
+			});
+		});
+	</script>
+	<!-- Script Play Music -->
 	<script>
 		// Background music control
 		const playButton = document.getElementById('play-music');
@@ -737,14 +763,19 @@
 
 		// Show main invitation and hide landing page
 		document.getElementById('open-invitation').addEventListener('click', function () {
-			document.getElementById('landing-page').classList.remove('active');
-			document.getElementById('landing-page').classList.add('hidden');
-			document.getElementById('page').classList.remove('hidden');
-			document.getElementById('page').classList.add('active');
+			document.getElementById('landing-page').classList.remove('show-in');
+			document.getElementById('landing-page').classList.add('show-off');
+			document.getElementById('page').classList.remove('show-off');
+			document.getElementById('page').classList.add('show-in');
+			// 	setTimeout(function() {
+			// }, 3000); // Adjust time to match the transition duration
 
 			music.volume = 0.1;
 			music.play();
 			playButton.innerHTML = '<i class="fas fa-pause"></i>';
+
+			// initializeWaypoints();
+			// Waypoint.refreshAll();
 		});
 	</script>
 	<script>
