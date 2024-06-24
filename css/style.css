@@ -1934,7 +1934,7 @@ form label {
 
 .fade-in.fade-active {
   opacity: 1;
-  animation: keyfadein 2s ease-in-out;
+  animation: keyfadein 1s ease-in-out;
 }
 
 .floating-button {
@@ -1944,8 +1944,8 @@ form label {
   background-color: #f14e95;
   color: white;
   border: none;
-  border-radius: 50%;
-  padding: 15px;
+  border-radius: 20%;
+  padding: 5px 12px;
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
@@ -1953,4 +1953,75 @@ form label {
 
 .floating-button:hover {
   background-color: #f14e95;
+}
+
+/* Button Styles */
+.transparent-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border: 2px solid white; /* White border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  cursor: pointer;
+  margin-top: 20px; /* Margin to separate from other elements */
+}
+
+.transparent-button:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
+  color: white;
+}
+
+.ig-transparent-button {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 18px;
+  color: #f14e95;
+  background-color: rgba(255, 192, 203, 0.2); /* Semi-transparent pink background */
+  border: 2px solid #f14e95; /* Pink border */
+  border-radius: 30%; /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  cursor: pointer;
+}
+
+.ig-transparent-button:hover {
+  background-color: rgba(255, 192, 203, 0.4); /* Slightly more opaque on hover */
+  color: pink;
+}
+
+.fab {
+  font-size: 18px; /* Font Awesome icon size */
+}
+
+/* Custom CSS jika diperlukan */
+.bank-logo img {
+  max-width: 100%;
+}
+
+.account-number p {
+  color: #333; /* Warna teks */
+}
+
+.btn-white {
+  background-color: #fff; /* Warna latar belakang tombol putih */
+  color: #333; /* Warna teks tombol */
+  border: 1px solid #ccc; /* Garis tepi tombol */
+}
+
+.btn-white:hover {
+  background-color: #f2f2f2; /* Warna latar belakang tombol putih saat hover */
+  color: #333; /* Warna teks tombol saat hover */
+}
+
+.card-bank-bg {
+  background-color: #f2f2f2; /* Warna latar belakang tombol putih saat hover */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 5%;
 }
