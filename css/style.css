@@ -1988,6 +1988,7 @@ form label {
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .ig-transparent-button:hover {
