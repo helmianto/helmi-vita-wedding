@@ -51,7 +51,7 @@ body {
 }
 
 a {
-  color: #f14e95;
+  color: #af2e4d;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -59,7 +59,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f14e95;
+  color: #af2e4d;
   outline: none;
   text-decoration: none;
 }
@@ -83,17 +83,17 @@ figure {
 
 ::-webkit-selection {
   color: #fff;
-  background: #f14e95;
+  background: #af2e4d;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: #f14e95;
+  background: #af2e4d;
 }
 
 ::selection {
   color: #fff;
-  background: #f14e95;
+  background: #af2e4d;
 }
 
 .fh5co-nav {
@@ -212,7 +212,7 @@ figure {
   color: #fff;
 }
 .fh5co-nav ul li.btn-cta a {
-  color: #f14e95;
+  color: #af2e4d;
 }
 .fh5co-nav ul li.btn-cta a span {
   background: #fff;
@@ -786,7 +786,7 @@ figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #f14e95;
+  color: #af2e4d;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -805,7 +805,7 @@ figure {
   position: relative;
 }
 .fh5co-contact-info ul li:before {
-  color: #f14e95;
+  color: #af2e4d;
   position: absolute;
   left: 0;
   top: 0.05em;
@@ -898,7 +898,7 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #f14e95;
+  color: #af2e4d;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -961,7 +961,7 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
+  background: #d8486b;
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1062,7 +1062,7 @@ form label {
   font-size: 20px;
   background: #fff;
   padding: 20px;
-  color: #f14e95;
+  color: #af2e4d;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -1085,7 +1085,7 @@ form label {
 }
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  color: #f14e95;
+  color: #af2e4d;
   font-size: 30px;
 }
 .couple-half .groom,
@@ -1183,7 +1183,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #f14e95;
+  color: #af2e4d;
 }
 .feature-center p,
 .feature-center h3 {
@@ -1206,7 +1206,7 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #f14e95;
+  color: #af2e4d;
   font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1241,7 +1241,7 @@ form label {
   display: block;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide span a.twitter {
-  color: #f14e95;
+  color: #af2e4d;
   font-weight: 300;
 }
 #fh5co-testimonial .wrap-testimony .testimony-slide figure {
@@ -1335,7 +1335,7 @@ form label {
   display: table-cell;
   vertical-align: middle;
   font-size: 30px;
-  color: #f14e95;
+  color: #af2e4d;
 }
 .feature-left .feature-copy {
   float: left;
@@ -1401,7 +1401,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #f14e95;
+  background: #af2e4d;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1447,7 +1447,7 @@ form label {
 }
 .owl-carousel .owl-controls .owl-dot.active span {
   background: transparent;
-  border: 2px solid #f14e95;
+  border: 2px solid #af2e4d;
 }
 
 #fh5co-offcanvas {
@@ -1709,25 +1709,25 @@ form label {
 }
 
 .btn-primary {
-  background: #f14e95;
+  background: #af2e4d;
   color: #fff;
-  border: 2px solid #f14e95;
+  border: 2px solid #af2e4d;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: #f366a3 !important;
-  border-color: #f366a3 !important;
+  background: #d8486b !important;
+  border-color: #d8486b !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #f14e95;
-  border: 2px solid #f14e95;
+  color: #af2e4d;
+  border: 2px solid #af2e4d;
 }
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-  background: #f14e95;
+  background: #af2e4d;
   color: #fff;
 }
 
@@ -1876,7 +1876,7 @@ form label {
 .form-control:focus {
   outline: none;
   box-shadow: none;
-  border-color: #f14e95;
+  border-color: #af2e4d;
 }
 
 .row-pb-md {
@@ -1941,7 +1941,7 @@ form label {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background-color: #f14e95;
+  background-color: #af2e4d;
   color: white;
   border: none;
   border-radius: 20%;
@@ -1952,7 +1952,7 @@ form label {
 }
 
 .floating-button:hover {
-  background-color: #f14e95;
+  background-color: #af2e4d;
 }
 
 /* Button Styles */
@@ -1980,9 +1980,9 @@ form label {
   display: inline-block;
   padding: 3px 10px;
   font-size: 18px;
-  color: #f14e95;
+  color: #af2e4d;
   background-color: rgba(255, 192, 203, 0.2); /* Semi-transparent pink background */
-  border: 2px solid #f14e95; /* Pink border */
+  border: 2px solid #af2e4d; /* Pink border */
   border-radius: 30%; /* Rounded corners */
   text-align: center;
   text-decoration: none;
@@ -2021,7 +2021,7 @@ form label {
 }
 
 .card-bank-bg {
-  background-color: #f2f2f2; /* Warna latar belakang tombol putih saat hover */
+  background-color: #f5f5f5; /* Warna latar belakang tombol putih saat hover */
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 5%;
