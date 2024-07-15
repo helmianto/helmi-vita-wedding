@@ -206,7 +206,7 @@
 										<div class="event-col">
 											<i class="icon-clock"></i>
 											<span>11:00 WIB</span>
-											<span>Selesai</span>
+											<span>14:00 WIB</span>
 										</div>
 										<div class="event-col">
 											<i class="icon-calendar"></i>
@@ -233,7 +233,9 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading fade-in">
 						<span>We Love Each Other</span>
 						<h2>Our Story</h2>
-						<p>Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan. Entah untuk saling duduk berdampingan atau saling memberi pelajaran. Entah untuk saling mengirim undangan pernikahan, atau duduk bersama di pelaminan.</p>
+						<p>Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan. Entah
+							untuk saling duduk berdampingan atau saling memberi pelajaran. Entah untuk saling mengirim undangan
+							pernikahan, atau duduk bersama di pelaminan.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -247,7 +249,10 @@
 										<span class="date">November, 2021</span>
 									</div>
 									<div class="timeline-body">
-										<p>Kami pertama kali bertemu melalui sebuah ketidaksengajaan yang melibatkan seorang teman. Pada saat itu, tidak ada perasaan khusus di antara kami. Kami hanya berkenalan secara singkat dan melanjutkan hidup masing-masing. Namun, pertemuan sederhana itu ternyata menjadi awal dari sebuah kisah yang tak terduga.</p>
+										<p>Kami pertama kali bertemu melalui sebuah ketidaksengajaan yang melibatkan seorang teman. Pada
+											saat itu, tidak ada perasaan khusus di antara kami. Kami hanya berkenalan secara singkat dan
+											melanjutkan hidup masing-masing. Namun, pertemuan sederhana itu ternyata menjadi awal dari sebuah
+											kisah yang tak terduga.</p>
 									</div>
 								</div>
 							</li>
@@ -259,7 +264,11 @@
 										<span class="date">Desember, 2023</span>
 									</div>
 									<div class="timeline-body">
-										<p>Setelah hampir 2 tahun dari perkenalan awal tersebut, kami bertemu kembali dan mulai saling mengenal lebih dalam. Kami mulai berkomunikasi secara intens dan menemukan banyak kesamaan yang membuat kami semakin dekat. Dalam setiap percakapan, benih-benih cinta perlahan mulai tumbuh. Momen-momen bersama menjadi semakin berarti dan kami mulai merasakan kehangatan satu sama lain.</p>
+										<p>Setelah hampir 2 tahun dari perkenalan awal tersebut, kami bertemu kembali dan mulai saling
+											mengenal lebih dalam. Kami mulai berkomunikasi secara intens dan menemukan banyak kesamaan yang
+											membuat kami semakin dekat. Dalam setiap percakapan, benih-benih cinta perlahan mulai tumbuh.
+											Momen-momen bersama menjadi semakin berarti dan kami mulai merasakan kehangatan satu sama lain.
+										</p>
 									</div>
 								</div>
 							</li>
@@ -271,7 +280,11 @@
 										<span class="date">Februari, 2024</span>
 									</div>
 									<div class="timeline-body">
-										<p>Seiring berjalannya waktu, kami memutuskan untuk menjalin hubungan yang lebih serius. Kami menikmati setiap momen bersama, berbagi suka dan duka, serta belajar saling mendukung. Pada akhir tahun ini, kami mengambil langkah besar dengan berkomitmen untuk melanjutkan hubungan ini ke jenjang yang lebih serius. Kami sangat bersemangat untuk memulai babak baru dalam kehidupan kami sebagai pasangan yang penuh cinta dan kebahagiaan.</p>
+										<p>Seiring berjalannya waktu, kami memutuskan untuk menjalin hubungan yang lebih serius. Kami
+											menikmati setiap momen bersama, berbagi suka dan duka, serta belajar saling mendukung. Pada akhir
+											tahun ini, kami mengambil langkah besar dengan berkomitmen untuk melanjutkan hubungan ini ke
+											jenjang yang lebih serius. Kami sangat bersemangat untuk memulai babak baru dalam kehidupan kami
+											sebagai pasangan yang penuh cinta dan kebahagiaan.</p>
 									</div>
 								</div>
 							</li>
@@ -454,7 +467,8 @@
 							<div class="col-md-4 col-sm-3">
 								<div class="form-group">
 									<label for="jumlahKehadiran" class="sr-only">Jumlah Kehadiran</label>
-									<input type="number" class="form-control" id="jumlahKehadiran" name="jumlahKehadiran" placeholder="Jumlah Kehadiran">
+									<input type="number" class="form-control" id="jumlahKehadiran" name="jumlahKehadiran"
+										placeholder="Jumlah Kehadiran">
 								</div>
 							</div>
 							<div class="col-md-3 col-sm-3">
@@ -502,9 +516,11 @@
 	</div>
 
 	<!-- Modal Image -->
-	<div id="imageModal" class="modal">
-		<span class="close">&times;</span>
-		<img class="modal-content" id="modalImage">
+	<div class="overlay-modal" id="overlay">
+		<div class="modal-content">
+			<span class="close-button" id="closeButton">&times;</span>
+			<img id="popupImage" src="" alt="Gallery Image">
+		</div>
 	</div>
 
 	<!-- jQuery -->
@@ -575,40 +591,41 @@
 				observer.observe(element);
 			});
 
-			// Pop Up Modal
-			var modal = document.getElementById("imageModal");
-			var modalImg = document.getElementById("modalImage");
-			var closeBtn = document.getElementsByClassName("close")[0];
-			var scrollPosition = 0;
+			// START: Pop Up Modal
+			const galleryItems = document.querySelectorAll('.gallery-image');
+			const overlay = document.getElementById('overlay');
+			const popupImage = document.getElementById('popupImage');
+			const closeButton = document.getElementById('closeButton');
+			let scrollPosition = 0;
 
-			document.querySelectorAll(".gallery-image").forEach(function (item) {
-				item.addEventListener("click", function () {
+			galleryItems.forEach(item => {
+				item.addEventListener('click', function () {
+					const bgImage = this.style.backgroundImage;
+					const imgSrc = bgImage.slice(5, -2); // Extract URL from style
+					popupImage.src = imgSrc;
+					overlay.style.display = 'flex';
 					scrollPosition = window.pageYOffset;
-					modal.style.display = "block";
-					var bgImage = this.style.backgroundImage;
-					bgImage = bgImage.replace('url("', '').replace('")', '');
-					modalImg.src = bgImage;
-					document.body.style.top = `-${scrollPosition}px`;
 					document.body.style.position = 'fixed';
+					document.body.style.top = `-${scrollPosition}px`;
+					document.body.style.width = '100%';
 				});
 			});
 
-			closeBtn.addEventListener("click", function () {
-				modal.style.display = "none";
+			function closeModal() {
+				overlay.style.display = 'none';
 				document.body.style.position = '';
 				document.body.style.top = '';
 				window.scrollTo(0, scrollPosition);
-			});
+			}
 
-			// Close the modal when the user clicks anywhere outside of the modal image
-			window.addEventListener("click", function (event) {
-				if (event.target == modal) {
-					modal.style.display = "none";
-					document.body.style.position = '';
-					document.body.style.top = '';
-					window.scrollTo(0, scrollPosition);
+			closeButton.addEventListener('click', closeModal);
+
+			overlay.addEventListener('click', function (e) {
+				if (e.target === overlay) {
+					closeModal();
 				}
 			});
+			// END: Pop Up Modal
 		});
 	</script>
 	<!-- Script Play Music -->
