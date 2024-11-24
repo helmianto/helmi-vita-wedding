@@ -969,6 +969,7 @@ form label {
   border-radius: 50%;
   position: relative;
   animation: pulse 1s ease infinite;
+  opacity: 0.6;
 }
 
 @keyframes pulse {
